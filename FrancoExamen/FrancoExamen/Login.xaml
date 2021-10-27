@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrancoExamen.Login">
+    <ContentPage.Content>
+        <StackLayout>
+
+
+
+            <Grid Margin="40"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="backgroundImage" 
+                   Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" 
+                   HorizontalOptions="FillAndExpand" 
+                   Aspect="Fill"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+                
+
+                <Label Text="Inicio de sesiòn"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="Title"
+                       Grid.Row="1" 
+                       Grid.Column="0"/>
+
+
+                <Entry x:Name="txtUser" 
+                       Placeholder="Usuario"
+                       Grid.Row="2" 
+                       Grid.Column="0"/>
+
+
+                <Entry x:Name="txtPassword" 
+                       Placeholder="Contraseña"
+                       IsPassword="True"
+                       Grid.Row="3" 
+                       Grid.Column="0"/>
+
+                <Button x:Name="btnLogin" 
+                        Grid.Row="4" 
+                        Grid.Column="0"
+                        Text="Ingresar" 
+                        Clicked="btnLogin_Clicked"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

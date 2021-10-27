@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrancoExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                <Entry x:Name="txtUsuarioConecteado" 
+                           IsReadOnly="True"
+                           TextColor="White" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+            </Frame>
+
+            <Grid Margin="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="txtUser" 
+                       Placeholder="Nombre de usuario"
+                       Grid.Row="0" 
+                       Grid.Column="0"/>
+
+                <Entry x:Name="txtMontoInicial" 
+                       Keyboard="Numeric"
+                       Placeholder="Monto inicial"
+                       Grid.Row="1" 
+                       Grid.Column="0"/>
+                
+                <Entry x:Name="txtPagoMensual" 
+                       IsReadOnly="True"
+                       Placeholder="Pago mensual"
+                       Grid.Row="2" 
+                       Grid.Column="0"/>
+                
+                <Button x:Name="btnCalcular" 
+                        Grid.Row="3" 
+                        Grid.Column="0"
+                        Text="Calcular" 
+                        Clicked="btnCalcular_Clicked"></Button>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
